@@ -88,13 +88,13 @@ O backend é organizado em quatro círculos concêntricos rigorosos:
 O sistema é particionado em contextos delimitados de alta coesão e baixo acoplamento:
 
 ```mermaid
-graph TD
-    Auth[Users & Auth] --> Collaboration[Collaboration & Groups]
-    ShoppingList[ShoppingList] --> Budget[Budget CQRS]
-    ShoppingList --> Products[Products Catalog]
-    Pantry[Pantry & Stock] --> Products
-    Pantry --> AI_OCR[AI / OCR Cupom]
-    Markets[Markets & Map Engine] --> ShoppingList
+flowchart TD
+    Auth["Users & Auth"] --> Collaboration["Collaboration & Groups"]
+    ShoppingList["ShoppingList"] --> Budget["Budget (CQRS)"]
+    ShoppingList --> Products["Products Catalog"]
+    Pantry["Pantry & Stock"] --> Products
+    Pantry --> AI_OCR["AI & OCR (Cupons)"]
+    Markets["Markets & Map Engine"] --> ShoppingList
 ```
 
 * **ShoppingList:** Gestão transacional de listas, ordenação por layout de loja e checkout.
@@ -230,5 +230,6 @@ readonly class AddItemToShoppingListUseCase
 
 Caso deseje avaliar o código-fonte proprietário completo, testes em execução ou agendar uma conversa técnica:
 
-- **Desenvolvedor:** [Seu Nome / LinkedIn / Contato]
+- **Desenvolvedor:** Giuliano Estigarraga Silveira
+- **LinkedIn:** [linkedin.com/in/giuliano-estigarraga-silveira-39876a175](https://www.linkedin.com/in/giuliano-estigarraga-silveira-39876a175/)
 - **Repositório Privado:** Acesso de leitura temporário pode ser concedido sob solicitação para recrutadores e avaliadores técnicos.
